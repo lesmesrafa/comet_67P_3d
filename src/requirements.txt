@@ -21,4 +21,4 @@ PyQt5
 visvis
 imageio
 tqdm
-functions
+polars

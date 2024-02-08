@@ -1,2 +1,8 @@
-data_url: "https://repos.cosmos.esa.int/socci/projects/SPICE_KERNELS/repos/rosetta/raw/kernels/dsk/ROS_CG_M001_OSPCLPS_N_V1.OBJ"
+data_url_67p: "https://s2e2.cosmos.esa.int/bitbucket/projects/SPICE_KERNELS/repos/rosetta/raw/misc/models/ROS_CG_M001_OSPCLPS_N_V1.OBJ?at=refs%2Fheads%2Fmaster"
 data_dwld: "data/"
+data: "data/ROS_CG_M001_OSPCLPS_N_V1.OBJ?at=refs%2Fheads%2Fmaster"
+col_names:
+    - type
+    - x1
+    - x2
+    - x3

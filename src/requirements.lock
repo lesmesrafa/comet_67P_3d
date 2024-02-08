@@ -134,8 +134,6 @@ fsspec[s3]==2023.12.2
     #   kedro
     #   kedro-viz
     #   s3fs
-functions==0.7.0
-    # via -r src/requirements.txt
 gitdb==4.0.11
     # via gitpython
 gitpython==3.1.41
@@ -183,7 +181,7 @@ ipython-genutils==0.2.0
     # via
     #   nbclassic
     #   notebook
-ipywidgets==8.1.1
+ipywidgets==8.1.2
     # via jupyter
 isoduration==20.11.0
     # via jsonschema
@@ -270,7 +268,7 @@ jupyterlab-server==2.25.2
     # via
     #   -r src/requirements.txt
     #   jupyterlab
-jupyterlab-widgets==3.0.9
+jupyterlab-widgets==3.0.10
     # via ipywidgets
 kedro==0.18.14
     # via
@@ -411,6 +409,8 @@ pluggy==1.2.0
     # via
     #   kedro
     #   pytest
+polars==0.20.7
+    # via -r src/requirements.txt
 pre-commit==3.6.0
     # via -r src/requirements.txt
 pre-commit-hooks==4.5.0
@@ -677,7 +677,7 @@ websockets==12.0
     # via uvicorn
 wheel==0.42.0
     # via pip-tools
-widgetsnbextension==4.0.9
+widgetsnbextension==4.0.10
     # via ipywidgets
 wrapt==1.16.0
     # via aiobotocore
