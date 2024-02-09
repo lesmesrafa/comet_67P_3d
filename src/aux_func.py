@@ -2,6 +2,7 @@ import pathlib
 import urllib.request
 import os
 import polars as pl
+from PyQt5.QtWidgets import QWidget, QHBoxLayout
 
 
 def download_file(dl_path, dl_url):
@@ -72,3 +73,44 @@ def obj2df(data_dir: str,  col_names: list[str]) -> pl.DataFrame:
 
 
     return pl.DataFrame(file_lines, schema = col_names)
+
+
+class MainViewPanel(QWidget):
+    """
+    MainViewPanel is a custom QWidget that integrates a plotting figure
+    using the specified backend for visualizations, and sets up the layout
+    and appearance of the main view panel.
+
+    This class creates a figure using the backend specified by
+    `vv.backends.backend_pyqt5.Figure`, places it within a horizontal layout,
+    and sets the window title. It's designed to serve as the main panel for
+    displaying visualizations in a PyQt5 application, specifically tailored
+    for showing Rosetta-related data.
+
+    Attributes:
+    - fig: A figure object created using the visualization backend, which is
+      intended to hold the plots or visualizations.
+    - sizer: A QHBoxLayout instance used to manage the layout of widgets in the
+      panel, specifically arranging the figure widget within the panel.
+
+    Parameters:
+    - *args: Variable length argument list passed to the QWidget constructor.
+             This allows for customization and flexibility in initializing the
+             QWidget base class.
+
+    Note:
+    - The class is dependent on the `vv.backends.backend_pyqt5` module for
+      creating the figure, which should be part of the visualization library
+      you're using. Ensure this backend is correctly installed and available.
+    - The `show()` method is called at the end of the initialization to
+      automatically display the widget upon creation. This behavior can be
+      adjusted if deferred display is preferred.
+    """
+    def __init__(self, *args) -> None: 
+        QWidget.__init__(self, *args)
+        selfr.fig = vv.backends.backend_pyqt5.Figure(self)
+        self.sizer = QHBoxLayout(self)
+        self.sizer.addWidget(self.fig._widget)
+        self.setLayout(self.sizer)
+        self.setWindowTitle("Rosetta")
+        self.show()

@@ -22,3 +22,4 @@ visvis
 imageio
 tqdm
 polars
+pyyaml

@@ -1,10 +1,51 @@
-# data science template based on kedro_tutorial template
+# A 3D View on Churyumov–Gerasimenko Comet
 
-## Overview
+<p align="center">
+  <a href="https://docs.python.org/3.10/">
+  <img alt="Python version" src="https://img.shields.io/badge/python-3.10-blue?&logo=python">
+  </a>
+  <a href="https://github.com/pre-commit/pre-commit"><img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit" alt="pre-commit" style="max-width:100%;"></a>
+  <a href="https://github.com/astral-sh/ruff">
+  <img alt="Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json?style=for-the-badge">
+  </a>
+  <a href="https://mypy-lang.org/">
+  <img alt="Checked with mypy" src="https://www.mypy-lang.org/static/mypy_badge.svg">
+  </a>
+  <a href="https://github.com/psf/black">
+  <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
+  </a>
+  <a href="https://jupyterbook.org">
+  <img alt="Documentation with jupyterbook" src="https://raw.githubusercontent.com/executablebooks/jupyter-book/master/docs/images/badge.svg">
+  </a>
+</p>
 
-This is your new Kedro project for the [spaceflights tutorial](https://docs.kedro.org/en/stable/tutorial/spaceflights_tutorial.html), which was generated using `Kedro 0.18.14`.
+## Overview👀
 
-Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
+The **Rosetta mission** was the **first** mission designed to **orbiting and landing on a comet**. The objective🎯 of the mission was **to study** the way in which the **Solar System evolved**, and to do so (and after some changes in the mission) the decision of **visit the comet 67P/Churyumov-Gerasimenko**☄️ was taken. 
+
+[![Video](http://i.imgur.com/aCeFvcJ.png)](https://dlmultimedia.esa.int/download/public/videos/2019/11/003/1911_003_AR_EN.mp4)
+
+## Objective🎯
+
+
+The objective of this project is to generate a 3D visualization of the comet 67P/Churyumov-Gerasimenko by utilizing data from the Optical, Spectroscopic, and Infrared Remote Imaging System (OSIRIS), which is a camera system onboard the orbiter Rosetta. This involves defining a coordinate system for the comet, which has a unique shape, and deriving a shape model that contains three-dimensional information of the comet. 
+
+The shape model, which includes vertices (positional vectors with X, Y, and Z coordinates), edges (links between vertices), and faces (areas enclosed by edges, defined by a list of vertex indices), enables the rendering, visualization, and manipulation of 3D objects representing the comet. 
+
+Additionally, shape models of comet 67P have also been derived using data from the Navigation Cameras (NAVCAM), originally intended for engineering purposes to determine the spacecraft's orientation in space, but which have also provided valuable scientific insights. 
+
+The project aims to leverage these shape models for creating detailed and accurate 3D visualizations of comet 67P.
+
+## Result🏁🪄
+
+The outcome of this project is a GIF image with a file size of 16.9 MiB, which showcases comet 67P/Churyumov-Gerasimenko rotating around its center. This visualization shows the 3D shape model derived from data obtained by the Optical, Spectroscopic, and Infrared Remote Imaging System (OSIRIS) aboard the Rosetta orbiter, as well as insights from the Navigation Cameras (NAVCAM). The GIF effectively demonstrates the comet's unique structure and dynamics by providing a comprehensive 360-degree view, enhancing our understanding and appreciation of its complex geometry and surface features. 
+
+
+
+![comet_67P](src/comet_67P.gif)
+
+
+
 
 ## Rules and guidelines
 
@@ -14,6 +55,7 @@ In order to get the best out of the template:
 * Make sure your results can be reproduced by following a [data engineering convention](https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention)
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
+
 
 ## How to install dependencies
 

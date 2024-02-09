@@ -96,7 +96,7 @@ coverage[toml]==7.4.1
     # via
     #   coverage
     #   pytest-cov
-debugpy==1.8.0
+debugpy==1.8.1
     # via ipykernel
 decorator==5.1.1
     # via ipython
@@ -477,7 +477,7 @@ python-dotenv==1.0.1
     # via uvicorn
 python-json-logger==2.0.7
     # via jupyter-events
-python-slugify==8.0.3
+python-slugify==8.0.4
     # via cookiecutter
 pytoolconfig[global]==1.3.1
     # via
@@ -487,6 +487,7 @@ pytz==2024.1
     # via pandas
 pyyaml==6.0.1
     # via
+    #   -r src/requirements.txt
     #   cookiecutter
     #   jupyter-events
     #   kedro
